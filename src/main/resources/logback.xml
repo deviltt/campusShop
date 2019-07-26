@@ -81,7 +81,7 @@
     </appender>
 
     <!-- 盛放日志对象，同时告知需要关注哪个package下的信息 -->
-    <logger name="com.tt.o2o" level="${log.level}" additivity="false">
+    <logger name="com.tt.o2o" level="${log.level}" additivity="true">
         <appender-ref ref="debugAppender"/>
         <appender-ref ref="infoAppender"/>
         <appender-ref ref="errorAppender"/>
