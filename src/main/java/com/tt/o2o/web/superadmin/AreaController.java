@@ -2,6 +2,8 @@ package com.tt.o2o.web.superadmin;
 
 import com.tt.o2o.entity.Area;
 import com.tt.o2o.service.impl.AreaServiceImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,12 +17,16 @@ import java.util.Map;
 @Controller
 @RequestMapping("superadmin")
 public class AreaController {
+    private Logger logger= LoggerFactory.getLogger(AreaController.class);
+
     @Autowired
     private AreaServiceImpl areaService;
 
     @RequestMapping(value = "listarea", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> listArea(){
+        logger.info("===start===");
+        long startTime=System.currentTimeMillis();
         Map<String, Object> modelMap=new HashMap<>();
         List<Area> areas;
         try {
@@ -29,7 +35,13 @@ public class AreaController {
             modelMap.put("total", areas.size());
         } catch (Exception e) {
             e.printStackTrace();
+            modelMap.put("success", false);
+            modelMap.put("errMsg", e.toString());
         }
+        logger.error("test error!");
+        long endTime=System.currentTimeMillis();
+        logger.debug("costTime:[{}ms]", endTime-startTime);
+        logger.info("===end===");
         return modelMap;
     }
 }
