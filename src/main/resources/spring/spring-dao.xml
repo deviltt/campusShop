@@ -29,7 +29,7 @@
         <!-- 扫描sql配置文件：mapper需要的xml文件 -->
         <property name="mapperLocations" value="classpath:mapper/*.xml"/>
         <!-- 扫描entity包 使用别名 -->
-        <property name="typeAliasesPackage" value="com.tt.oa.entity"/>
+        <property name="typeAliasesPackage" value="com.tt.o2o.entity"/>
     </bean>
 
     <!--配置扫描Dao接口包，动态实现Dao接口，注入到Spring容器中-->
@@ -37,6 +37,6 @@
         <!--注入sqlSessionFactory-->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <!--给出需要扫描Dao接口包-->
-        <property name="basePackage" value="com.tt.oa.dao"/>
+        <property name="basePackage" value="com.tt.o2o.dao"/>
     </bean>
 </beans>

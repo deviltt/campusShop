@@ -25,7 +25,7 @@
 <!--            <mvc:mapping path="/receipts/**"/>-->
 <!--            <mvc:mapping path="/staff/**"/>-->
 <!--            <mvc:mapping path="/result/**"/>-->
-<!--            <bean class="com.tt.oa.interceptor.LoginInterceptor"/>-->
+<!--            <bean class="com.tt.o2oo.interceptor.LoginInterceptor"/>-->
 <!--        </mvc:interceptor>-->
 <!--    </mvc:interceptors>-->
 
@@ -43,5 +43,5 @@
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
 
     <!--扫描web相关的bean-->
-    <context:component-scan base-package="com.tt.oa.controller"/>
+    <context:component-scan base-package="com.tt.o2o.controller"/>
 </beans>

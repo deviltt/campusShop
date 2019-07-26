@@ -10,7 +10,7 @@
     http://www.springframework.org/schema/tx
     http://www.springframework.org/schema/tx/spring-tx.xsd">
     <!--扫描service包下所有使用注解的类型-->
-    <context:component-scan base-package="com.tt.oa.service.impl"/>
+    <context:component-scan base-package="com.tt.o2o.service.impl"/>
 
     <!--配置事务管理-->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
