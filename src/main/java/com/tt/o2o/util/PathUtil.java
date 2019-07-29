@@ -23,7 +23,7 @@ public class PathUtil {
     }
 
     /**
-     * @param shopId 店铺Id
+     * @param shopId 店铺Id，根据不同的店铺Id创建文件夹
      * @return 根据不同的业务需求，返回项目的子路径
      */
     public static String getShopImagePath(long shopId) {

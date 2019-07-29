@@ -21,11 +21,12 @@ public class ImageUtil {
 
     /**
      * 将commonsMultipartFile转换成file
+     *
      * @param commonsMultipartFile
      * @return
      */
-    public static File transferCommonsMuiltipartFileToFile(CommonsMultipartFile commonsMultipartFile){
-        File newFile =new File(commonsMultipartFile.getOriginalFilename());
+    public static File transferCommonsMuiltipartFileToFile(CommonsMultipartFile commonsMultipartFile) {
+        File newFile = new File(commonsMultipartFile.getOriginalFilename());
         try {
             commonsMultipartFile.transferTo(newFile);
         } catch (IOException e) {
@@ -37,6 +38,7 @@ public class ImageUtil {
 
     /**
      * 处理缩略图，并返回新生成图片的相对值路径，
+     *
      * @param thumbnail
      * @param targetAddr
      * @return
